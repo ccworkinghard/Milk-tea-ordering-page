@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+    <title>Forms Review</title>
+  </head>
+  <body>
+    <section id="overlay">
+
+      <p id="logo">Order your milktea!</p>
+      <hr>
+      <form action="./submission.html" method="POST">
+        <!-- label for 后面是input的id -->
+        <!-- 奶茶口味 -->
+        <label for="falvor-input">你想要什么口味的奶茶？</label> 
+        <input type="text" 
+        name="falvor-input" 
+        value=" " 
+        id="falvor-input" 
+        minlength="2" 
+        maxlength="10" 
+        placeholder="请输入2~10个字" 
+        required>
+        <br>
+        <span>─────────</span>
+        <br>
+
+        <!-- 杯数 -->
+        <label for="number-input">你想要几杯？</label> 
+        <input type="number" name="number-input" value=" " min="1" max="4"
+        id="number-input" placeholder="最多1杯，最少4杯" required>
+        <br>
+        <span>─────────</span>
+        <br>
+
+        <!-- 糖分 -->
+        <label for="sugar-content-input">你需要的糖分量</label> 
+        <br>
+        <!-- range：滑动输入框 -->
+        无糖
+        <input type="range" min="1分糖" max="5分糖" name="sugar-content-input" value="3分糖" id="sugar-content-input">
+        全糖
+        <br>
+        <span>─────────</span>
+        <br>
+
+        <!-- 顶料 -->
+        你想要什么顶料？
+        <br>
+        <span class="checkbox-space">
+          <span>
+            <input type="checkbox" name="check-ice-cream" value=" ">冰淇淋
+          </span>
+          <span>
+            <input type="checkbox" name="check-milk-cap" value=" ">奶盖
+          </span>
+          <span>
+            <input type="checkbox" name="check-cocoa-powder" value=" ">奶盖
+          </span>
+        </span>
+        <br>
+        <span>─────────</span>
+        <br>
+
+        <!-- 加冰 -->
+        你需要加冰吗？
+        <br>
+        <span class="checkbox-space">
+          <span>
+            <input type="radio" name="need-ice" value=" ">Yes
+          </span>
+          <span>
+            <input type="radio" name="no-ice" value=" ">No
+          </span>
+        </span>
+        <br>
+        <span>─────────</span>
+        <br>
+
+        <!-- 加料 -->
+        <label for="addition-material">你需要加什么料？</label> 
+        <select name="addition-material" id="addition-material">
+          <option value="珍珠">珍珠</option>
+          <option value="波霸">波霸</option>
+          <option value="布丁">布丁</option>
+        </select>
+        <br>
+        <span>─────────</span>
+        <br>
+
+        <!-- 规格 -->
+        <label for="specifications">你要什么规格？</label> 
+        <select name="specifications" id="specifications">
+          <option value="小杯">小杯</option>
+          <option value="中杯">中杯</option>
+          <option value="大杯">大杯</option>
+        </select>
+        <br>
+        <span>─────────</span>
+        <br>
+
+        <!-- 别的要求输入 -->
+        <label for="other-requirements">您还有什么别的要求吗？</label>
+        <br>
+        <textarea name="other-requirements" id="other-requirements" cols="35" rows="5"></textarea>
+        <br>
+        <span>─────────</span>
+        <br>
+
+        <!-- 联系方式 -->
+        <label for="telphone">您的联系方式：</label>
+        <input type="tel" id="telphone" placeholder="请输入手机号码" size="11" 
+        pattern="^(13[0-9]|14[5|7]|15[0|1|2|3|5|6|7|8|9]|18[0|1|2|3|5|6|7|8|9])\d{8}$">
+        <br>
+        <br>
+
+        <!-- 提交按钮 -->
+        <input type="submit" name="submit" id="submit">
+
+      </form>
+      
+    </section>
+  </body>
+</html>
